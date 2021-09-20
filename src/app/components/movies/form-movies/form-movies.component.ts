@@ -24,7 +24,7 @@ export class FormMoviesComponent implements OnInit {
     if(id){
       this.movieSrv.getMovieById(id).subscribe(data=>{
         this.movie = data;
-        this.formTitle = 'Edit Movie ' + data.title
+        this.formTitle = 'Edit ' + data.title +' Movie ' 
       }) 
     }
     this.formTitle = 'Add new Movie'

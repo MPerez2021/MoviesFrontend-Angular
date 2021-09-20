@@ -1,59 +1,120 @@
 .header{    
-    height: 3.5rem;
-    width: 100%;
+    min-height: 3.5rem;    
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--header-color);    
-    box-shadow: 0px 5px 8px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 8px -5px rgba(0, 0, 0, 0.75);   
+    flex-wrap: wrap;
+    font-size: large;
 }
 
 .title{
     cursor: pointer;
     color: var(--text-color);      
     margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header__hamburguerIcon{
+    color: var(--icon-color);
+    display: none;
 }
 
 .header__left{
     display: flex;
-    padding-left: 10px; 
+    padding: 10px;
+    align-content: center;
 }
 
-.header__left .add > button{
+.header__search {      
+    background-color: var(--bg-color);
+    border-radius: 999px;
+    padding: 8px 15px;
+    margin-right: 10px;      
+}  
+
+.header__right .add > button{
     border: none;
     background-color: transparent;
     color: var(--text-color); 
-    margin-left: 20px;   
+    margin-right: 20px;   
     & i{
         margin-right: 5px;
         font-size: small;
     } 
 }
 
+.header__search > input, ::placeholder{
+   border: none;
+    outline-width: 0;
+    background-color: transparent;  
+    color: var(--text-color);   
+    width: 90%;        
+}
+.header__search > i{
+    color: var(--icon-color);
+}  
 .header__right{
     display: flex;     
-    align-items: center;
-    & .header__search {      
-        background-color: var(--bg-color);
-        border-radius: 999px;
-        padding: 8px 15px;
-        margin-right: 10px;  
-    }  
-    & .header__search > input, ::placeholder{
-        border: none;
-        outline-width: 0;
-        background-color: transparent;  
-        color: var(--text-color);             
-    }
-    & .header__search > i{
-        color: var(--icon-color);
-    }    
+    align-items: center;    
+
 }
 
+.header__right .add button{
+    display: flex;
+    align-items: center;
+}
 .header__darkMode{
     margin-right: 15px;
     & i{
         cursor: pointer;
         color: var(--icon-color);      
     }
+}
+
+/*RESPONSIVE DESIGN*/
+@media (max-width: 991px) {   
+ 
+    .header__right{
+        display: none;
+        width: 100%;
+    }
+
+    .header__hamburguerIcon{
+        display: flex;      
+        position: absolute;
+        right: .5rem;
+        top: 1.2rem;
+        font-size: 1.5rem;      
+    }
+
+    .add, .header__darkMode{
+        width: 100%;
+        display: flex;   
+        justify-content: center;
+        padding: .8rem .1rem; 
+        margin-right: 0;
+    }
+    
+    .header__darkMode i{
+        padding: 1px 6px;
+    }
+
+    .add:hover, .header__darkMode:hover{
+        background-color: var(--bg-color); 
+    }
+
+    .header__right.show{
+        display: flex;  
+        flex-direction: column;
+        justify-content: end;        
+        & .add i{
+            display: none;
+        }
+    }
+
+ 
 }

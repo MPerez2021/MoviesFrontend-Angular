@@ -28,4 +28,10 @@ export class HeaderComponent implements OnInit {
 
     localStorage.setItem('theme', theme)
   }
+
+  seeMenu(){
+    const menu = document.getElementsByClassName('header__right');
+    menu[0].classList.toggle('show');   
+    
+  }
 }

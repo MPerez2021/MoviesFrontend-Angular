@@ -1,18 +1,22 @@
 <div class="header">
-    <div class="header__left">
+    <div class="header__left">        
         <div class="title" routerLink="/home">MOVIES</div>
-        <div class="add">
-            <button type="button" href="" routerLink="/movie/add"><i class="fas fa-plus"></i>Add movie</button>
-        </div>
-    </div>
-    <div class="header__right">
-        <div class="header__search">
+        <div class="header__search col-sm-8 col-md-8 col-lg-9 col-xl-9">
             <input type="text" placeholder="Search a movie">
             <i class="fas fa-search"></i>
         </div>
-        <div class="header__darkMode">
-            <i class="fas fa-moon" (click)="darkMode()"></i>
-        </div>
+        <div class="header__hamburguerIcon">
+            <i class="fas fa-bars" (click)="seeMenu()"></i>
+        </div>       
+    </div>
+    <div class="header__right">        
+        <div class="add">
+            <button type="button" href="" routerLink="/movie/add"><i class="fas fa-plus"></i>Add movie</button>
+        </div>     
+            <div class="header__darkMode">
+                <i class="fas fa-moon" (click)="darkMode()"></i>
+            </div>
+       
     </div>
 
 </div>

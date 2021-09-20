@@ -1,12 +1,11 @@
-.container-fluid{
+.test{
     background-color: var(--bg-color);
-    min-height: calc(100vh - 56px);
+    min-height: calc(100vh - 65px);
 }
 .formulario{
     display: flex;
     justify-content: center;
-    padding: 30px;
-
+    padding: 5%;
 }
 
 .card{
