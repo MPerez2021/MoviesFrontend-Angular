@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --bg-color: white;
+    --bgCardInput-color: #fafafa;
+    --icon-color: black;
+    --text-color: black;
+    --header-color: #c9e6fa;
+    --border-color: #ffffff;
+    --boxShadowCard-color: 5px 7px 16px -5px rgb(0 0 0 / 75%);
+    --border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.dark-mode{
+    --bg-color: #202c37;
+    --bgCardInput-color: #2b3945;
+    --icon-color: white;
+    --text-color: white;    
+    --header-color: #2b3945;    
+    --border-color: white;
+    --boxShadowCard-color: 5px 7px 16px -5px rgb(162 161 161 / 57%);
+    --border-bottom: 1px solid rgba(255, 254, 254, 0.125);
+}
+

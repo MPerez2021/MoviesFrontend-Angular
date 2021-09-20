@@ -1,0 +1,18 @@
+<div class="header">
+    <div class="header__left">
+        <div class="title" routerLink="/home">MOVIES</div>
+        <div class="add">
+            <button type="button" href="" routerLink="/movie/add"><i class="fas fa-plus"></i>Add movie</button>
+        </div>
+    </div>
+    <div class="header__right">
+        <div class="header__search">
+            <input type="text" placeholder="Search a movie">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="header__darkMode">
+            <i class="fas fa-moon" (click)="darkMode()"></i>
+        </div>
+    </div>
+
+</div>

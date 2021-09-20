@@ -23,14 +23,27 @@ export class MovieService {
   }
 
   addMovie(movie:Movie): Observable<Movie>{
-    return this.httpClient.post<Movie>(this.httpClient + '/add', movie);
+    return this.httpClient.post<Movie>(this.apiUrl + '/add', movie);
   }
   
-  updateMovie(id:number, movie: Movie):Observable<Movie>{
-    return this.httpClient.put<Movie>(this.httpClient + `/update/${id}`, movie)
+  updateMovie(id:number,movie: Movie):Observable<any>{
+    return this.httpClient.put<any>(this.apiUrl + `/update/${id}`, movie)
   }
 
   deleteMovie(id:number):Observable<void>{
-    return this.httpClient.delete<void>(this.httpClient + `/delete/${id}`)
+    return this.httpClient.delete<void>(this.apiUrl + `/delete/${id}`)
+  }
+
+  manejadorMovies(id:number, movie: Movie){
+    if(id){
+      this.updateMovie(id,movie).subscribe(data=>{
+        console.log(data);        
+      })
+    }else{
+      this.addMovie(movie).subscribe(data=>{
+        console.log(data);
+        location.reload();        
+      })
+    }
   }
 }

@@ -1,42 +1,39 @@
 .home{
     min-height: 100vh;
-}
-.header{    
-    height: 3.5rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #504e4e;    
-    box-shadow: 0px 5px 8px -5px rgba(0, 0, 0, 0.75);
+    background-color: var(--bg-color);
 }
 
-.header__left{
-    display: flex;
-    padding-left: 10px; 
+.card{
+    width: 280px;
+    height: 100%;
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+    transition: transform 300ms ease-in;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--text-color);
+    background-color: var(--bgCardInput-color);
 }
-
-.header__right{
-    display: flex;
-    background-color: #fafafa;
-    border-radius: 999px;
-    padding: 8px 15px;
-    margin-right: 10px;
-    align-items: center;
-    & > input, ::placeholder{
-        border: none;
-        outline-width: 0;
-        background-color: transparent;
-    }
-    & > i{
-        margin-left: 10px;
-        cursor: pointer;
-    }
+.card:hover{
+    transform: scale(1.05);
 }
-
-
 .card__grid{
     display: flex;
     justify-content: space-between;
     padding: 30px;
+}
+.card > img{
+    border-radius: 0.5rem 0.5rem 0 0;
+    object-fit: contain;
+    object-position: center center;
+    height: 180px;
+    width: 100%;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: end; 
+    &> .btn{
+        margin-left: 10px;
+    }
 }

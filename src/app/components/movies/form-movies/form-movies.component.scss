@@ -1,0 +1,35 @@
+.container-fluid{
+    background-color: var(--bg-color);
+    min-height: calc(100vh - 56px);
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+}
+
+.card{
+    width: 400px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+    box-shadow:var(--boxShadowCard-color);    
+}
+
+.card-header{
+    border-bottom: var(--border-bottom);
+}
+.form-control{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.handle__buttons{
+    display: flex;
+    justify-content: space-evenly;
+    & > button{
+        max-width: 100px;
+        width: 100%;
+    }
+}

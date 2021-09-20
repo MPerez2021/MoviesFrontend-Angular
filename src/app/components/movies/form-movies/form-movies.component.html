@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container-fluid" *ngIf="movie">
+    <div class="formulario">
+        <div class="card">
+            <div class="card-header d-flex justify-content-center">
+               <h5>{{formTitle}}</h5>
+              </div>
+            <div class="card-body col-12">
+                <form #Form="ngForm" (ngSubmit)="onUpdate(movie)">
+                    <div class="mb-3">
+                        <label class="form-label">Title</label>
+                        <input type="text" [(ngModel)]="movie.title" name="title" class="form-control"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" [(ngModel)]="movie.description" name="description"
+                            rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Duration</label>
+                        <input type="text" [(ngModel)]="movie.duration" name="duration" class="form-control"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Image Url</label>
+                        <input type="text" [(ngModel)]="movie.imageUrl" name="imageUrl" class="form-control"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="handle__buttons">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-danger" routerLink="/home">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
